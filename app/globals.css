@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  /* Tema Cassino: Fundo preto, texto dourado */
+  --background: #0f0f0f;
+  --foreground: #FFD700;
+  
+  --casino-red: #8B0000;
+  --casino-gold: #FFD700;
+  --casino-dark: #1a1a1a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-casino-red: var(--casino-red);
+  --color-casino-gold: var(--casino-gold);
+  --color-casino-dark: var(--casino-dark);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Courier New', Courier, monospace; /* Fonte estilo máquina antiga */
+}
+
+/* Classes utilitárias personalizadas */
+.btn-gold {
+  background-color: var(--casino-gold);
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+.btn-gold:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
+}
+
+.btn-red {
+  background-color: var(--casino-red);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ff0000;
+}
+.btn-red:hover {
+  background-color: #660000;
+}
+
+.input-cassino {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #222;
+  border: 1px solid var(--casino-gold);
+  color: var(--casino-gold);
+  border-radius: 0.25rem;
+  outline: none;
+}
+.input-cassino:focus {
+  box-shadow: 0 0 10px var(--casino-red);
+}
